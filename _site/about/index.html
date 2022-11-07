@@ -1,0 +1,66 @@
+<!--default.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/8d0a6ba879.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/site/assets/stylesheets/style.css"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>About</title>
+  </head>
+  <body>
+    
+    <main class="page"><p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for Minima at GitHub:
+<a href="https://github.com/jekyll">jekyll</a> /
+<a href="https://github.com/jekyll/minima">minima</a></p>
+
+<p>You can find the source code for Jekyll at GitHub:
+<a href="https://github.com/jekyll">jekyll</a> /
+<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+
+</main>
+    <nav>
+  <input
+    class="container_toggle"
+    type="checkbox"
+    id="color-switch"
+    name="mode"
+    onchange="ThemeChanger()"
+  />
+  <label class="theme_toggle" for="color-switch"
+    ><i class="fa-regular fa-moon"></i> <i class="fa-solid fa-sun"></i></label>
+  <ul id="navbar">
+    <li>
+      <i onclick="location.href='/'" class="fa-brands fa-phoenix-framework"></i>
+      <small>Home</small>
+    </li>
+    <li>
+      <i onclick="location.href='/about'" class="fa-solid fa-circle-info"></i>
+      <small>about me</small>
+    </li>
+  </ul>
+  <i class="fa-solid fa-angle-right" id="menu"
+    ><i class="fa-solid fa-thumbtack"></i
+  ></i>
+  <avatar onclick="avaclick()"> </avatar>
+</nav>
+
+    <footer><div class="foot">
+  <small>Let the Dark Take over!</small>
+</div>
+</footer>
+    <script src="/site/assets/javascript/main.js"></script>
+  </body>
+</html>
