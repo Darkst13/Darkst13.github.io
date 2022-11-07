@@ -1,0 +1,114 @@
+$body-font-family: "Helvetica Neue", Arial, sans-serif;
+$body-font-size: 16px;
+$prose-font-size: 20px;
+
+// Type scale
+$h0-mobile: 64px;
+$h0-desktop: 128px;
+
+$h1-size: 40px !default;
+$h2-size: 32px !default;
+$h3-size: 24px !default;
+$h4-size: 20px !default;
+$h5-size: 16px !default;
+$h6-size: 12px !default;
+
+// Default border color
+$color-border: #ddd !default;
+
+// Container width
+$container-width: 64em;
+
+// Large breakpoint
+$breakpoint-lg: 52em;
+
+// Spacing unit
+$spacer: 8px !default;
+
+// Spacing scale
+$spacer-1: $spacer !default; // 8px
+$spacer-2: ($spacer * 2) !default; // 16px
+$spacer-3: ($spacer * 4) !default; // 32px
+$spacer-4: ($spacer * 8) !default; // 64px
+
+// =============== themes ===============
+
+html,
+html[data-theme="dark"] {
+  --bg: #171717;
+  --color: white;
+  --scrollbar-color: #474E68 #000000;
+  --scrollbar-thumb: #474E68;
+  --scrollbar-track: #000000;
+  --main-a: #0096FF;
+  --main-a-after: #20c2f7;
+  --dark-star-sides: white;
+  --cards-border-color: #6b728e;
+  --cards-bg: #171717;
+  --cards-bg-hover: #1b2430;
+  --nav-bg: #00000041;
+  --i-fa-angle-right-hover: #304163;
+  --i-fa-angle-right-pined: #304163;
+  --icon-color: white;
+  --icon-color-hover: crimson;
+  body {
+    background-position: 100%;
+    .fa-moon {
+      opacity: 1;
+      transition: opacity 200ms ease-in-out 200ms;
+    }
+    .fa-sun {
+      opacity: 0;
+      transition: opacity 200ms ease-in-out;
+    }
+  }
+}
+html[data-theme="light"] {
+  --bg: #ebebeb;
+  --color: black;
+  --scrollbar-color: #256D85 #DFF6FF;
+  --scrollbar-thumb: #256D85;
+  --scrollbar-track: #DFF6FF;
+  --main-a: #4f67d4;
+  --main-a-after: #1ba1ce;
+  --dark-star-sides: black;
+  --cards-border-color: #373b4b;
+  --cards-bg: #d8d8d8;
+  --cards-bg-hover: #5a6e91;
+  --nav-bg: #f7fbfc41;
+  --i-fa-angle-right-hover: #0066786b;
+  --i-fa-angle-right-pined: #0094ab8e;
+  --icon-color: #354259;
+  --icon-color-hover: #85f4ff;
+  body {
+    background-position: 0%;
+    .fa-moon {
+      opacity: 0;
+      transition: opacity 200ms ease-in-out;
+    }
+    .fa-sun {
+      opacity: 1;
+      transition: opacity 200ms ease-in-out 200ms;
+    }
+  }
+}
+
+/*
+var(--bg);
+var(--color);
+var(--scrollbar-color);
+var(--scrollbar-track);
+var(--scrollbar-thumb);
+var(--main-a);
+var(--main-a-after);
+var(--dark-star-sides);
+var(--cards-border-color);
+var(--cards-bg);
+var(--cards-bg-hover);
+*/
+
+// ===============================
+
+html.transition body {
+  transition: ease-in-out 200ms;
+}

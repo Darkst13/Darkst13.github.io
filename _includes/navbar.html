@@ -1,0 +1,25 @@
+<nav>
+  <input
+    class="container_toggle"
+    type="checkbox"
+    id="color-switch"
+    name="mode"
+    onchange="ThemeChanger()"
+  />
+  <label class="theme_toggle" for="color-switch"
+    ><i class="fa-regular fa-moon"></i> <i class="fa-solid fa-sun"></i></label>
+  <ul id="navbar">
+    <li>
+      <i onclick="location.href='/'" class="fa-brands fa-phoenix-framework"></i>
+      <small>Home</small>
+    </li>
+    <li>
+      <i onclick="location.href='/about'" class="fa-solid fa-circle-info"></i>
+      <small>about me</small>
+    </li>
+  </ul>
+  <i class="fa-solid fa-angle-right" id="menu"
+    ><i class="fa-solid fa-thumbtack"></i
+  ></i>
+  <avatar onclick="avaclick()"> </avatar>
+</nav>

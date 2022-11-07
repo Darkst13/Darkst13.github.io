@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h1 class="site-title" id="dark-star">{{ site.title }}</h1>
+
+<div class="gallery">
+  <div class="post-list">
+    {% for post in site.posts %}
+    <div class="cards" onclick="location.href='{{ post.url | relative_url }}'">
+      {{post.title}}
+    </div>
+    {% endfor %}
+  </div>
+</div>

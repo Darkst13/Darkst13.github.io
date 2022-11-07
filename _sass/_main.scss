@@ -1,0 +1,305 @@
+// Import sass partials (used in all themes)
+@import "variables", "typography";
+
+// -----------------
+@media (min-width: 1024px) {
+  // desktop
+  @import "desktop";
+}
+
+@media (max-width: 1024px) {
+  // mobile
+  @import "mobile";
+}
+// ___________________________
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color);
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+  }
+}
+body {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(23, 23, 23, 1) 60%
+  );
+  background-size: 500%;
+  color: var(--color);
+  display: grid;
+  margin: 0%;
+  a {
+    text-decoration: none;
+    -webkit-text-stroke: 0;
+  }
+  main a {
+    display: inline-block;
+    position: relative;
+    padding: 10px 0;
+    color: var(--main-a);
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      transform: scaleX(0);
+      background-color: var(--main-a-after);
+
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  p,
+  small,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    -webkit-text-stroke: 0.1px var(--color);
+  }
+}
+
+Hero {
+  img {
+    width: 100%;
+  }
+}
+nav.top + Hero i {
+  cursor: pointer;
+  opacity: 1;
+}
+
+avatar {
+  height: 3rem;
+  width: 3rem;
+  background: none;
+  background-image: url("/assets/images/avatar.jpg");
+  background-size: contain;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+  &::after {
+    content: "Dark";
+    position: absolute;
+    right: 50%;
+    top: -50%;
+    transform: translate(50%, 0%);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    scale: 0.5;
+  }
+}
+
+.screenCover {
+  scale: 1000;
+}
+
+.rss-subscribe {
+  display: none;
+  visibility: hidden;
+}
+
+footer {
+  grid-template-rows: auto 1fr auto;
+  background: #22283117;
+  backdrop-filter: blur(10px) saturate(125%);
+  -webkit-backdrop-filter: blur(10px) saturate(125%);
+  display: flex;
+  justify-content: center;
+  border-top: 0.1px solid #3333;
+  align-content: center;
+    flex-wrap: wrap;
+  .foot {
+    z-index: 1;
+    height: 4vh;
+    border-radius: 6px 6px 0px 0px;
+    text-align: center;
+    font-size: x-large;
+  }
+}
+
+.darker {
+  background: #000000b9;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1.75rem;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 100%;
+  border-color: #d8334a !important;
+  box-shadow: 0 0 1rem -0.25rem #d8334a, inset 0 0 1rem -0.75rem #d8334a;
+  color: #d8334a;
+  cursor: pointer;
+  transition: 0.25s -0.05s;
+  border: 1px solid #252429;
+  height: 3rem;
+  width: 3rem;
+  z-index: 99;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    box-shadow: 0 0 1rem -0.25rem var(--accent), inset 0 0 1rem -0.25rem #d8334a;
+  }
+}
+.post-list-heading {
+  margin: auto;
+}
+/*
+// .post-list {
+//   list-style: none;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   flex-direction: column;
+//   overflow: hidden;
+//   width: 19rem;
+//   height: 7rem;
+//   li {
+//     cursor: pointer;
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//     margin: 5px;
+//     margin: 20px;
+//     width: 21rem;
+//     padding: 1rem;
+//     padding: 1rem;
+//     border: 0.1px solid;
+//     border-radius: 1rem;
+//     color: indigo;
+//     &:hover {
+//       color: #1b2430;
+//     }
+//     &::after {
+//       display: none;
+//     }
+//     span {
+//       position: relative;
+//       opacity: 0.5;
+//       left: 5%;
+//       bottom: -45%;
+//       width: fit-content;
+//       height: fit-content;
+//       translate: 25% -50%;
+//     }
+//   }
+// }
+*/
+
+#dark-star {
+  margin-bottom: 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  &::before {
+    content: "";
+    height: 1px;
+    width: 4rem;
+    background: var(--dark-star-sides);
+    align-self: center;
+    margin-inline: 15px;
+  }
+  &::after {
+    content: "";
+    height: 1px;
+    width: 4rem;
+    background: var(--dark-star-sides);
+    align-self: center;
+    margin-inline: 15px;
+  }
+}
+
+.gallery {
+  .post-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+    .cards {
+      border: 0.1px solid var(--cards-border-color);
+      background: var(--cards-bg);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 0;
+      min-width: 12rem;
+      text-align: center;
+      font-size: 2rem;
+      cursor: pointer;
+      flex-grow: 1;
+      scale: 0.9;
+      transition: all 700ms ease-in-out;
+
+      &:hover {
+        scale: 1;
+        background: var(--cards-bg-hover);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  // animation: typing 3.5s 4s steps(30, end) backwards;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.container_toggle {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
