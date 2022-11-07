@@ -51,6 +51,7 @@ html[data-theme="dark"] {
   --i-fa-angle-right-pined: #304163;
   --icon-color: white;
   --icon-color-hover: crimson;
+  --highlight-bg: #474E68;
   body {
     background-position: 100%;
     .fa-moon {
@@ -80,6 +81,7 @@ html[data-theme="light"] {
   --i-fa-angle-right-pined: #0094ab8e;
   --icon-color: #354259;
   --icon-color-hover: #85f4ff;
+  --highlight-bg: #B7C4CF;
   body {
     background-position: 0%;
     .fa-moon {
