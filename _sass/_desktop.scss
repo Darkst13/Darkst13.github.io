@@ -72,14 +72,18 @@ nav {
     }
     & ul {
       translate: 6rem;
+      & li{
+        font-size: 3rem;
+      }
       small {
         opacity: 1;
         scale: 1;
+        font-size: 1rem;
       }
     }
     & .theme_toggle {
       translate: 3.5rem;
-      background-color:transparent;
+      background-color: transparent;
     }
     & avatar {
       opacity: 1;
@@ -223,6 +227,8 @@ nav {
 }
 hero {
   padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 main {
   margin: 15%;
@@ -230,6 +236,10 @@ main {
 }
 
 .typewriter {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  translate: 50%;
   animation: move 2s 4s forwards;
 }
 @keyframes move {
@@ -244,11 +254,4 @@ main {
   to {
     display: none;
   }
-}
-
-.typewriter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50%;
 }

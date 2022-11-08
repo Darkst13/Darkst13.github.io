@@ -155,3 +155,28 @@ function trans() {
     document.documentElement.classList.remove("transition");
   }, 1000);
 }
+
+
+function idleLogout() {
+  var t;
+  window.onload = resetTimer;
+  window.onmousemove = resetTimer;
+  window.onmousedown = resetTimer;  // catches touchscreen presses as well      
+  window.ontouchstart = resetTimer; // catches touchscreen swipes as well      
+  window.ontouchmove = resetTimer;  // required by some devices 
+  window.onclick = resetTimer;      // catches touchpad clicks as well
+  window.onkeydown = resetTimer;   
+  window.addEventListener('scroll', resetTimer, true); // improved; see comments
+
+  function yourFunction() {
+      // your function for too long inactivity goes here
+      // e.g. window.location.href = 'logout.php';
+      console.log("time")
+  }
+
+  function resetTimer() {
+      clearTimeout(t);
+      t = setTimeout(yourFunction, 10000);  // time is in milliseconds
+  }
+}
+idleLogout();

@@ -8,6 +8,17 @@
 
 // font-family: 'Lateef', serif;
 
+:root {
+  --fs-1: 5rem;
+  --fs-2: 4.5rem;
+  --fs-3: 4rem;
+  --fs-4: 3rem;
+  --fs-5: 2rem;
+  --fs-6: 1.5rem;
+  --fs-p: 1rem;
+  --fs-sp: 0.5rem;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,30 +82,32 @@ h6 {
   margin-bottom: 0.25em;
 }
 
-p {
-  font-size: 16px;
-}
 h1 {
-  font-size: calc(2rem + 3vw);
+  --tt-key: h1fs;
 }
 h2 {
-  font-size: calc(2rem + 2vw);
+  --tt-key: h2fs;
 }
 h3 {
-  font-size: calc(1.5rem + 2vw);
+  --tt-key: h3fs;
 }
 h4 {
-  font-size: calc(1rem + 2vw);
+  --tt-key: h4fs;
 }
 h5 {
-  font-size: calc(1rem + 1.5vw);
+  --tt-key: h5fs;
 }
 h6 {
-  font-size: calc(1rem + 1vw);
+  --tt-key: h6fs;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
-
+p {
+  --tt-key: pfs;
+}
+.typewriter h1 {
+ font-size: clamp(1.5rem,5vw, 5rem);
+}
 p,
 small,
 h1,
@@ -136,9 +149,65 @@ main a {
   }
 }
 
-
-.highlight > pre  {
+.highlight > pre {
   background: var(--highlight-bg);
   border-radius: 2px;
   padding: 7px;
+}
+
+@keyframes h1fs {
+  0% {
+    font-size: var(--fs-2);
+  }
+  100% {
+    font-size: var(--fs-1);
+  }
+}
+@keyframes h2fs {
+  0% {
+    font-size: var(--fs-3);
+  }
+  100% {
+    font-size: var(--fs-2);
+  }
+}
+@keyframes h3fs {
+  0% {
+    font-size: var(--fs-4);
+  }
+  100% {
+    font-size: var(--fs-3);
+  }
+}
+@keyframes h4fs {
+  0% {
+    font-size: var(--fs-5);
+  }
+  100% {
+    font-size: var(--fs-4);
+  }
+}
+@keyframes h5fs {
+  0% {
+    font-size: var(--fs-6);
+  }
+  100% {
+    font-size: var(--fs-5);
+  }
+}
+@keyframes h6fs {
+  0% {
+    font-size: var(--fs-p);
+  }
+  100% {
+    font-size: var(--fs-6);
+  }
+}
+@keyframes pfs {
+  0% {
+    font-size: var(--fs-sp);
+  }
+  100% {
+    font-size: var(--fs-p);
+  }
 }
