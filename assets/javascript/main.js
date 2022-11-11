@@ -172,11 +172,22 @@ function idleLogout() {
       // your function for too long inactivity goes here
       // e.g. window.location.href = 'logout.php';
       console.log("time")
+      fullimg(true)
   }
 
   function resetTimer() {
+    fullimg(false)
       clearTimeout(t);
       t = setTimeout(yourFunction, 10000);  // time is in milliseconds
   }
 }
 idleLogout();
+
+function fullimg(choice){
+  let hero = document.getElementsByTagName("hero")
+  if (hero.length !==  0 && choice == true){
+    hero[0].style.paddingInline = "0vw"
+  } else {
+    hero[0].style.paddingInline = "5vw"
+  }
+}

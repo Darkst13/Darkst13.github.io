@@ -72,7 +72,7 @@ nav {
     }
     & ul {
       translate: 6rem;
-      & li{
+      & li {
         font-size: 3rem;
       }
       small {
@@ -229,6 +229,39 @@ hero {
   padding-left: 1rem;
   display: flex;
   flex-direction: column;
+  .fa-contener {
+    position: relative;
+    left: 50%;
+    bottom: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 2rem;
+    height: 2rem;
+    opacity: 0;
+    border-radius: 30%;
+    transition: all 500ms ease-in-out;
+    animation: appeare 2s 3s forwards;
+    color: var(--color);
+    scroll-behavior: smooth;
+    i {
+      position: absolute;
+      bottom: 50%;
+    }
+    &:hover {
+      background: var(--nav-bg);
+      cursor: pointer;
+      scale: 2;
+      background: var(--nav-bg);
+      border-radius: 50%;
+      transition: all 500ms ease-in-out;
+      & i {
+        opacity: 1;
+        transition: all 600ms ease-in-out;
+        // scale: 1;
+      }
+    }
+  }
 }
 main {
   margin: 15%;
@@ -237,21 +270,31 @@ main {
 
 .typewriter {
   position: absolute;
-  top: 50%;
   right: 50%;
+  bottom: 50%;
   translate: 50%;
   animation: move 2s 4s forwards;
 }
 @keyframes move {
   from {
-    top: 50%;
     opacity: 1;
   }
   to {
-    top: 90%;
+    scale: 0.5;
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes appeare {
+  from {
     opacity: 0;
   }
   to {
-    display: none;
+    bottom: 20%;
+  }
+  to {
+    opacity: 1;
   }
 }
